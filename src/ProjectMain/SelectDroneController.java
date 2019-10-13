@@ -7,10 +7,15 @@ package ProjectMain;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class SelectDroneController extends Main {
 
@@ -44,6 +49,9 @@ public class SelectDroneController extends Main {
     @FXML
     private Label feedbackLabel;
 
+    @FXML
+    private Button cameraFeedButton;
+
     public void connectToDrone(ActionEvent actionEvent) {
     }
 
@@ -63,5 +71,11 @@ public class SelectDroneController extends Main {
     }
 
     public void rotateClockwise(ActionEvent actionEvent) {
+    }
+
+    public void cameraFeedButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("DroneKeyOps.fxml"));
+        Main.primaryStage.setScene(new Scene(root, 640.0, 400.0));
+        Main.primaryStage.show();
     }
 }

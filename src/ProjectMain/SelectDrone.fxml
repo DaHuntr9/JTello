@@ -23,6 +23,7 @@
               </content>
             </ScrollPane>
             <Label fx:id="feedbackLabel" layoutX="272.0" layoutY="219.0" text="Drone Feedback" textFill="#803d3d" />
+            <Button fx:id="cameraFeedButton" layoutX="452.0" layoutY="25.0" mnemonicParsing="false" onAction="#cameraFeedButton" text="Drone Camera Feed" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0" />
       </children>
     </AnchorPane>
   </children>
