@@ -23,11 +23,21 @@ public class StartProgramController {//extends Main{
     private Label instructionLabel;
 
     @FXML
-    private Button startButton;
+    private Button changeToButtonOpsScene;
 
     @FXML
-    public void changeScene(ActionEvent actionEvent) throws IOException{
+    private Button changeToKeyOpsScene;
+
+    @FXML
+    public void changeToButtonOpsScene(ActionEvent actionEvent) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("SelectDrone.fxml"));
+        Main.primaryStage.setScene(new Scene(root, 640.0, 400.0));
+        Main.primaryStage.show();
+    }
+
+    @FXML
+    public void changeToKeyOpsScene(ActionEvent actionEvent) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("DroneKeyOps.fxml"));
         Main.primaryStage.setScene(new Scene(root, 640.0, 400.0));
         Main.primaryStage.show();
     }
