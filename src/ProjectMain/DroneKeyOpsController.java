@@ -16,20 +16,22 @@ public class DroneKeyOpsController {
     private Button keyControlsButton;
 
     @FXML
-    private Button connectButton;
+    private Button connectionButton;
 
     @FXML
     public void connectToDrone(javafx.event.ActionEvent actionEvent) {
-        if(connectButton.getText().equals("Connect")){
+        //TODO: check if the drone is already connected upon switching Scenes.
+
+        if(connectionButton.getText().equals("Connect To Drone")){
             //connect to drone code goes here
 
             //If successfully connected to the drone then change the text for the user.
-            connectButton.setText("Disconnect");
-        }else if (connectButton.getText().equals("Disconnect")) {
+            connectionButton.setText("Disconnect From Drone");
+        }else if (connectionButton.getText().equals("Disconnect From Drone")) {
             //disconnect to drone code goes here
 
             //If successfully connected to the drone then change the text for the user.
-            connectButton.setText("Connect");
+            connectionButton.setText("Connect To Drone");
         }
     }
 

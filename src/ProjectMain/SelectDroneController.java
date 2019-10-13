@@ -53,6 +53,19 @@ public class SelectDroneController extends Main {
     private Button cameraFeedButton;
 
     public void connectToDrone(ActionEvent actionEvent) {
+        //TODO: check if the drone is already connected upon switching Scenes.
+
+        if(connectionButton.getText().equals("Connect To Drone")){
+            //connect to drone code goes here
+
+            //If successfully connected to the drone then change the text for the user.
+            connectionButton.setText("Disconnect From Drone");
+        }else if (connectionButton.getText().equals("Disconnect From Drone")) {
+            //disconnect to drone code goes here
+
+            //If successfully connected to the drone then change the text for the user.
+            connectionButton.setText("Connect To Drone");
+        }
     }
 
     public void increaseAltitude(javafx.event.ActionEvent actionEvent) {
